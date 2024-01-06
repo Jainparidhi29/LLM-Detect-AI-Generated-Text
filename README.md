@@ -7,15 +7,15 @@ The project starts by loading and exploring the provided datasets. Visualization
 ## Data Preprocessing
 Data is split into training and testing sets using the train_test_split function from scikit-learn. The necessary columns, including 'text' and 'generated,' are selected. Labels are assigned to training and testing sets for ease of model training.
 
-#**Model Architecture
+## Model Architecture
 The BERT model is constructed using TensorFlow and TensorFlow Hub. The model includes a preprocessor for tokenization and encoding, followed by dense layers with dropout for further processing. The final layer outputs a binary classification result using a sigmoid activation function.
 
-#**Model Training**
+## Model Training
 The model is compiled with an Adam optimizer, binary cross entropy loss, and accuracy as the evaluation metric. Training is conducted over five epochs with a batch size of 8. A ModelCheckpoint and EarlyStopping callback are implemented to save the best model based on validation accuracy and prevent overfitting.
 
-#**Results and Evaluation**
+## Results and Evaluation
 After training the model, it is evaluated on the testing set, and predictions are obtained. These predictions, along with true labels, are used to generate a confusion matrix. The confusion matrix is visualized using ConfusionMatrixDisplay from scikit-learn, including the F1 score in the title. The F1 score provides a balance between precision and recall and is a suitable metric for imbalanced datasets.
  	
-#**Conclusion**
+## Conclusion
 The project demonstrates the process of building and training a BERT model for the detection of AI-generated text. It involves data exploration, preprocessing, model construction, and evaluation using a confusion matrix. 
 
